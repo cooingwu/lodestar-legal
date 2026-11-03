@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北辰 Lodestar · 隐私政策</title>
+<style>
+  :root { --ink:#0d111b; --sub:#57606f; --line:#d8dee8; --brand:#2B62D6; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.85 "Segoe UI","Microsoft YaHei",sans-serif; color:var(--ink); background:#fff; }
+  .wrap { max-width:780px; margin:0 auto; padding:48px 24px 72px; }
+  h1 { font-size:24px; margin:0 0 4px; }
+  h2 { font-size:16px; margin:36px 0 8px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+  .sub { color:var(--sub); font-size:12px; }
+  .en { color:var(--sub); border-top:1px dashed var(--line); margin-top:48px; padding-top:24px; }
+  .en h2 { color:var(--sub); font-size:14px; }
+  code { background:#f4f6fa; border:1px solid var(--line); border-radius:4px; padding:1px 6px; font:12px Consolas,monospace; }
+  a { color:var(--brand); }
+  .nav { margin:10px 0 0; font-size:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>隐私政策</h1>
+<div class="sub">北辰 Lodestar（以下简称「本应用」）· 发布者 CooHub · 生效日期 2026-11-03 · 版本 v1.0</div>
+<div class="nav"><a href="#eula">最终用户许可协议（EULA）→</a></div>
+
+<h2>一、总则：默认零遥测</h2>
+<p>本应用<b>不收集、不上传、不出售</b>任何用户数据。我们没有账号系统、没有广告、没有分析 SDK、没有崩溃收集服务。应用的一切功能均在你自己的设备上完成。</p>
+
+<h2>二、本地处理的数据</h2>
+<p>以下数据仅在<b>你的设备本地</b>处理与存储，存储目录为 <code>%LOCALAPPDATA%\InfiniteDesk</code>：</p>
+<ul>
+  <li><b>桌面与文件信息</b>：为在画布上显示图标，读取文件名、类型、缩略图与修改时间；仅在本地渲染与记忆布局。</li>
+  <li><b>照片元数据</b>：相册插件展示拍摄参数（EXIF）时在本地读取，不外发。</li>
+  <li><b>位置（可选）</b>：星图「实时星象」功能通过 Windows 系统定位获取经纬度，<b>仅用于本设备上的天文计算，绝不发送到任何服务器</b>。坐标缓存在本地。你随时可以在系统设置中关闭本应用的位置权限，应用会自动回退为按时区估算，功能不中断。</li>
+  <li><b>壁纸</b>：读取系统壁纸文件用作画布背景。</li>
+  <li><b>应用设置与插件数据</b>：全部保存在上述本地目录。</li>
+</ul>
+
+<h2>三、网络活动</h2>
+<p>本应用仅在以下情形与外部通信，且均由你主动触发或由微软组件执行：</p>
+<ul>
+  <li><b>商店授权校验</b>：试用与购买状态由 Microsoft Store 体系验证（Windows.Services.Store），相关数据处理适用<b>微软隐私政策</b>。</li>
+  <li><b>Microsoft Edge WebView2 运行时</b>：本应用基于该系统组件渲染，其自身行为由微软管辖。</li>
+  <li><b>升级跳转</b>：点击「前往商店」时打开微软商店页面。</li>
+</ul>
+<p>除此之外，本应用自身不发起任何网络请求。</p>
+
+<h2>四、第三方插件</h2>
+<p>本应用支持第三方插件。插件的权限在安装时明示，其数据行为由<b>插件自身及其隐私政策</b>管辖，不属于本政策范围。</p>
+
+<h2>五、删除你的数据</h2>
+<p>卸载应用后，本地数据目录 <code>%LOCALAPPDATA%\InfiniteDesk</code> 会保留（便于重装恢复）。你可以随时手动删除该目录，即彻底清除本应用的全部数据。</p>
+
+<h2>六、未成年人</h2>
+<p>本应用不面向 13 岁以下儿童，也不故意收集儿童信息。</p>
+
+<h2>七、开源与数据致谢</h2>
+<p>内置星表数据来自 HYG Database（David Nash，CC BY-SA 4.0）与 Yale Bright Star Catalogue 的整理版本。</p>
+
+<h2>八、政策变更与联系</h2>
+<p>政策如有实质变更将在应用内与新版本一同提示。联系我们：<code>cooingwu@foxmail.com</code>。</p>
+
+<div class="en">
+<h1>Privacy Policy (English)</h1>
+<div class="sub">Lodestar ("the app") · Publisher CooHub · Effective 2026-11-03 · v1.0</div>
+
+<h2>1. In short: zero telemetry by default</h2>
+<p>We collect, upload, and sell <b>no user data</b>. There is no account system, no advertising, no analytics SDK, and no crash collection. Everything happens on your device.</p>
+
+<h2>2. Data processed locally</h2>
+<ul>
+  <li><b>Files &amp; desktop</b>: file names, types, thumbnails and timestamps are read locally to render icons and remember layout.</li>
+  <li><b>Photo metadata (EXIF)</b>: read locally for the gallery caption; never transmitted.</li>
+  <li><b>Location (optional)</b>: the real-time star chart uses Windows location (latitude/longitude) <b>only for on-device astronomy math</b>. Coordinates never leave your device. You can revoke location permission at any time; the app falls back to a time-zone estimate.</li>
+  <li><b>Wallpaper</b>: the system wallpaper file is read to paint the canvas background.</li>
+  <li><b>Settings &amp; plugin data</b>: stored under <code>%LOCALAPPDATA%\InfiniteDesk</code>.</li>
+</ul>
+
+<h2>3. Network activity</h2>
+<ul>
+  <li><b>Store licensing</b>: trial/purchase state is verified through Microsoft Store (covered by Microsoft's privacy policy).</li>
+  <li><b>Microsoft Edge WebView2 Runtime</b>: a Microsoft system component used for rendering.</li>
+  <li><b>Upgrade link</b>: opens the Microsoft Store product page when you tap "Upgrade".</li>
+</ul>
+
+<h2>4. Third-party plugins</h2>
+<p>Plugins declare their permissions at install time and are governed by their own privacy policies.</p>
+
+<h2>5. Deleting your data</h2>
+<p>Uninstalling keeps <code>%LOCALAPPDATA%\InfiniteDesk</code> (so reinstalls restore your canvas). Delete that folder to erase everything.</p>
+
+<h2>6. Children</h2>
+<p>The app is not directed at children under 13.</p>
+
+<h2>7. Credits</h2>
+<p>Star data derived from the HYG Database (David Nash, CC BY-SA 4.0) and the Yale Bright Star Catalogue.</p>
+
+<h2>8. Changes &amp; contact</h2>
+<p>Material changes ship with an in-app notice. Contact: <code>cooingwu@foxmail.com</code>.</p>
+</div>
+
+</div>
+</body>
+</html>
