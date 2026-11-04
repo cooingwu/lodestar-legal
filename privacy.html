@@ -16,89 +16,153 @@
   .en h2 { color:var(--sub); font-size:14px; }
   code { background:#f4f6fa; border:1px solid var(--line); border-radius:4px; padding:1px 6px; font:12px Consolas,monospace; }
   a { color:var(--brand); }
+  .law { color:var(--sub); font-size:12px; }
   .nav { margin:10px 0 0; font-size:12px; }
+  h3 { font-size:14px; margin:20px 0 6px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <h1>隐私政策</h1>
-<div class="sub">北辰 Lodestar（以下简称「本应用」）· 发布者 CooHub · 生效日期 2026-11-03 · 版本 v1.0</div>
-<div class="nav"><a href="#eula">最终用户许可协议（EULA）→</a></div>
+<div class="sub">北辰 Lodestar（以下简称「本应用」）· 发布者 CooHub · 生效日期 2026-11-05 · 版本 v1.0（初始版）</div>
+<div class="nav"><a href="eula.html">最终用户许可协议（EULA）→</a></div>
 
-<h2>一、总则：默认零遥测</h2>
-<p>本应用<b>不收集、不上传、不出售</b>任何用户数据。我们没有账号系统、没有广告、没有分析 SDK、没有崩溃收集服务。应用的一切功能均在你自己的设备上完成。</p>
+<h2>一、总则：不收集，不上传</h2>
+<p>本应用<b>不收集、不上传、不出售</b>任何用户数据。我们没有账号系统、没有广告、没有营销推送、没有分析 SDK、没有崩溃收集服务。应用的一切功能均在你自己的设备上完成，我们没有任何服务器。</p>
+<p>本政策即《中华人民共和国个人信息保护法》第十七条所称的个人信息处理规则：它公开提供、便于查阅和保存，向真实、准确、完整地告知我们的身份与联系方式、处理目的与方式、信息种类与保存期限，以及你行使权利的方式和程序。</p>
 
-<h2>二、本地处理的数据</h2>
+<h2>二、我们处理哪些信息（全部仅在你的设备上）</h2>
 <p>以下数据仅在<b>你的设备本地</b>处理与存储，存储目录为 <code>%LOCALAPPDATA%\InfiniteDesk</code>：</p>
 <ul>
   <li><b>桌面与文件信息</b>：为在画布上显示图标，读取文件名、类型、缩略图与修改时间；仅在本地渲染与记忆布局。</li>
   <li><b>照片元数据</b>：相册插件展示拍摄参数（EXIF）时在本地读取，不外发。</li>
-  <li><b>位置（可选）</b>：星图「实时星象」功能通过 Windows 系统定位获取经纬度，<b>仅用于本设备上的天文计算，绝不发送到任何服务器</b>。坐标缓存在本地。你随时可以在系统设置中关闭本应用的位置权限，应用会自动回退为按时区估算，功能不中断。</li>
   <li><b>壁纸</b>：读取系统壁纸文件用作画布背景。</li>
-  <li><b>应用设置与插件数据</b>：全部保存在上述本地目录。</li>
+  <li><b>剪贴板</b>：仅在你执行复制、粘贴等对应功能，或已获你授权的插件访问剪贴板时读取，仅在本地即时使用，不落日志、不上传。</li>
+  <li><b>键盘与鼠标输入</b>：为了让画布接收按键与拖动，应用安装了系统级键盘与鼠标钩子。按键仅在你使用画布时被<b>实时转发</b>到画布，<b>不记录、不存储任何按键内容</b>；鼠标钩子用于拖动协议与「桌面点击守护」诊断。</li>
+  <li><b>应用设置与插件数据</b>：全部保存在上述本地目录，数据由你全权控制。</li>
 </ul>
 
-<h2>三、网络活动</h2>
-<p>本应用仅在以下情形与外部通信，且均由你主动触发或由微软组件执行：</p>
+<h3>位置（可选，属敏感个人信息）</h3>
+<p>星图「实时星象」功能需要经纬度做本地天文计算（恒星时）。应用启动时会尝试通过 <b>Windows 系统定位</b>读取一次位置；该访问<b>完全受系统定位权限控制</b>——你在系统设置中关闭定位或拒绝本应用的位置权限后，应用静默回退为按系统时区估算经度，星图功能不中断。</p>
+<ul>
+  <li><b>用途与方式</b>：仅用于本设备上的天文计算，经纬度（保留 4 位小数）缓存在本地数据库；<b>绝不发送到任何服务器</b>，不用于识别、画像或营销。</li>
+  <li><b>拒绝方式</b>：系统设置 → 隐私和安全性 → 位置，随时关闭；关闭不影响其他功能。</li>
+</ul>
+
+<h3>本地诊断日志</h3>
+<p>应用在本地目录 <code>%LOCALAPPDATA%\InfiniteDesk\logs</code> 写入诊断日志（<code>app-*.log</code> 会话日志、<code>perf-*.log</code> 性能采样、<code>input-guard.log</code> 桌面点击守护）。日志可能包含上述本地处理信息的痕迹（例如文件路径、定位成功记录）。这些日志<b>只存在于你的设备上，永不上传</b>；历史日志会在启动时与运行期间自动清理（当前会话文件与守护日志保留）。</p>
+
+<h3>系统信息只读访问</h3>
+<p>应用还会以<b>只读</b>方式访问：注册表中的主题设置（跟随系统明暗）、文件关联信息（显示图标）、回收站条目（撤销「删除」时原样恢复文件）。均为本地操作，不修改系统安全设置。</p>
+
+<h2>三、保存期限</h2>
+<p>本应用的数据全部存储于你的设备，处理目的由你持续使用而维系：<b>保存期限即你保留这些数据的期限</b>。你删除对应数据或卸载应用时，处理即告终止。日志按上文所述的自动清理周期仅保留必要时长。</p>
+
+<h2>四、网络活动</h2>
+<p>本应用仅在以下情形与外部通信，且均由微软组件执行或由你主动触发：</p>
 <ul>
   <li><b>商店授权校验</b>：试用与购买状态由 Microsoft Store 体系验证（Windows.Services.Store），相关数据处理适用<b>微软隐私政策</b>。</li>
-  <li><b>Microsoft Edge WebView2 运行时</b>：本应用基于该系统组件渲染，其自身行为由微软管辖。</li>
+  <li><b>Microsoft Edge WebView2 运行时</b>：本应用基于该系统组件渲染，其自身行为由微软管辖；运行时缺失时，应用会引导你前往微软官方页面下载。</li>
   <li><b>升级跳转</b>：点击「前往商店」时打开微软商店页面。</li>
+  <li><b>插件市场</b>：打开设置「插件」页或安装/更新插件时，应用从官方市场索引（GitHub 及其 CDN 镜像 jsDelivr）下载插件目录与安装包，并检查官方安全封禁清单。这些请求是普通 HTTPS 下载，<b>不携带任何个人信息、账号或设备标识</b>；下载的安装包经 SHA-256 校验与解包安全检查。网络不可用时仅市场不可用，其余功能不受影响。</li>
 </ul>
-<p>除此之外，本应用自身不发起任何网络请求。</p>
+<p>除此之外，本应用自身不发起任何网络请求。本应用不发送任何商业性信息。</p>
 
-<h2>四、第三方插件</h2>
-<p>本应用支持第三方插件。插件的权限在安装时明示，其数据行为由<b>插件自身及其隐私政策</b>管辖，不属于本政策范围。</p>
+<h2>五、第三方插件</h2>
+<p>本应用支持第三方插件。市场插件上架前经<b>人工审核</b>，安装时向用户明示作者与所申请的权限（可能包括网络访问、剪贴板读写等）；确认违规的插件会被官方下架封禁，已安装的将自动停用并隔离（插件数据保留在本地、不会被删除）。</p>
+<p>插件自身的网络访问与数据处理行为，由<b>插件自身及其作者的隐私政策</b>管辖，不属于本政策范围。请在意隐私的你在安装前阅读插件说明与权限申请，拒绝授权即不安装。</p>
 
-<h2>五、删除你的数据</h2>
-<p>卸载应用后，本地数据目录 <code>%LOCALAPPDATA%\InfiniteDesk</code> 会保留（便于重装恢复）。你可以随时手动删除该目录，即彻底清除本应用的全部数据。</p>
+<h2>六、你的权利与行使方式</h2>
+<p>你的数据只在你自己的设备上，因此下列权利你都可以<b>直接、即时地行使，无需向我们提交任何请求</b>：</p>
+<ul>
+  <li><b>知情与查阅</b>：设置页可查看存储占用；数据均为本地明文文件与数据库，可直接查看。</li>
+  <li><b>复制与转移</b>：直接复制本地目录中的文件即可。</li>
+  <li><b>删除</b>：删除 <code>%LOCALAPPDATA%\InfiniteDesk</code> 即彻底、不可逆地清除本应用的全部数据。</li>
+  <li><b>撤回同意</b>：关闭系统定位权限即撤回对位置处理的同意；停用或卸载插件即撤回对其授权。</li>
+</ul>
+<p class="law">（对应《个人信息保护法》第四十四条至第四十七条：知情权、决定权、限制或拒绝处理、请求删除。）</p>
 
-<h2>六、未成年人</h2>
-<p>本应用不面向 13 岁以下儿童，也不故意收集儿童信息。</p>
+<h2>七、未成年人</h2>
+<p>本应用不面向<b>不满十四周岁</b>的未成年人，也不在明知其为不满十四周岁未成年人的情况下处理其个人信息；如需处理，应当取得其父母或其他监护人的同意。监护人可随时要求更正、删除相关数据——由于数据仅存于本机，直接删除本地目录即可。</p>
 
-<h2>七、开源与数据致谢</h2>
+<h2>八、数据安全</h2>
+<p>你的数据不出设备，其安全由你设备的系统安全机制（账户、磁盘加密等）保护。市场安装包经强制 SHA-256 校验、解包路径检查与清单校验后才可安装。我们建议你自行做好常规备份。</p>
+
+<h2>九、开源与数据致谢</h2>
 <p>内置星表数据来自 HYG Database（David Nash，CC BY-SA 4.0）与 Yale Bright Star Catalogue 的整理版本。</p>
 
-<h2>八、政策变更与联系</h2>
+<h2>十、政策变更与联系</h2>
 <p>政策如有实质变更将在应用内与新版本一同提示。联系我们：<code>cooingwu@foxmail.com</code>。</p>
+<p class="law">本政策依据《中华人民共和国个人信息保护法》第十三条、第十七条、第十九条、第二十八条、第三十一条、第四十四条、第四十七条，《中华人民共和国未成年人保护法》第七十二条，《中华人民共和国消费者权益保护法》第二十九条及《中华人民共和国民法典》第一千零三十四条制定。</p>
 
 <div class="en">
 <h1>Privacy Policy (English)</h1>
-<div class="sub">Lodestar ("the app") · Publisher CooHub · Effective 2026-11-03 · v1.0</div>
+<div class="sub">Lodestar ("the app") · Publisher CooHub · Effective 2026-11-05 · v1.0 (initial release)</div>
 
-<h2>1. In short: zero telemetry by default</h2>
-<p>We collect, upload, and sell <b>no user data</b>. There is no account system, no advertising, no analytics SDK, and no crash collection. Everything happens on your device.</p>
+<h2>1. In short: nothing collected, nothing uploaded</h2>
+<p>We collect, upload, and sell <b>no user data</b>. There is no account system, no advertising, no marketing push, no analytics SDK, and no crash collection. Everything happens on your device; we run no servers. This policy is our personal-information processing rule under Article 17 of the PRC Personal Information Protection Law (PIPL): it is published, easy to consult and keep, and truthfully states who we are, what we process, why, for how long, and how you can exercise your rights.</p>
 
-<h2>2. Data processed locally</h2>
+<h2>2. What we process (on your device only)</h2>
+<p>All of the following is processed and stored <b>locally</b> under <code>%LOCALAPPDATA%\InfiniteDesk</code>:</p>
 <ul>
   <li><b>Files &amp; desktop</b>: file names, types, thumbnails and timestamps are read locally to render icons and remember layout.</li>
   <li><b>Photo metadata (EXIF)</b>: read locally for the gallery caption; never transmitted.</li>
-  <li><b>Location (optional)</b>: the real-time star chart uses Windows location (latitude/longitude) <b>only for on-device astronomy math</b>. Coordinates never leave your device. You can revoke location permission at any time; the app falls back to a time-zone estimate.</li>
   <li><b>Wallpaper</b>: the system wallpaper file is read to paint the canvas background.</li>
-  <li><b>Settings &amp; plugin data</b>: stored under <code>%LOCALAPPDATA%\InfiniteDesk</code>.</li>
+  <li><b>Clipboard</b>: read only when you use copy/paste features or an authorized plugin accesses the clipboard; used locally on the spot, never logged or uploaded.</li>
+  <li><b>Keyboard &amp; mouse input</b>: the app installs system-level hooks so the canvas receives keys and dragging. Keystrokes are <b>forwarded in real time</b> while you use the canvas and are <b>never recorded or stored</b>; the mouse hook serves the drag protocol and a desktop-click diagnostic guard.</li>
+  <li><b>Settings &amp; plugin data</b>: stored locally, fully under your control.</li>
 </ul>
 
-<h2>3. Network activity</h2>
+<h3>Location (optional; sensitive personal information)</h3>
+<p>The real-time star chart needs your coordinates for on-device astronomy. At startup the app tries one read via <b>Windows system location</b>; this is <b>entirely governed by the OS location permission</b> — if you turn location off or deny the app, it silently falls back to a time-zone estimate and nothing breaks.</p>
+<ul>
+  <li><b>Purpose &amp; method</b>: on-device astronomy only; coordinates (4 decimal places) are cached in the local database and <b>never sent anywhere</b>, never used for identification, profiling or marketing.</li>
+  <li><b>Refusal</b>: Settings → Privacy &amp; security → Location, anytime; other features are unaffected.</li>
+</ul>
+
+<h3>Local diagnostic logs</h3>
+<p>The app writes local logs under <code>%LOCALAPPDATA%\InfiniteDesk\logs</code> (<code>app-*.log</code> session log, <code>perf-*.log</code> performance sampling, <code>input-guard.log</code> desktop-click guard). Logs may contain traces of the locally processed data above (e.g. file paths, a successful location fix). They <b>stay on your device and are never uploaded</b>; historical logs are cleaned automatically at startup and periodically (current-session and guard logs are kept).</p>
+
+<h3>Read-only system access</h3>
+<p>The app also reads, read-only: registry theme settings (follow-system light/dark), file associations (to show icons), and Recycle Bin entries (to restore files on undo). All local.</p>
+
+<h2>3. Retention</h2>
+<p>All data lives on your device and exists for as long as you keep using the app: <b>the retention period is however long you keep the data</b>. Deleting the data or uninstalling ends processing. Logs are trimmed automatically to the minimum needed, as described above.</p>
+
+<h2>4. Network activity</h2>
 <ul>
   <li><b>Store licensing</b>: trial/purchase state is verified through Microsoft Store (covered by Microsoft's privacy policy).</li>
-  <li><b>Microsoft Edge WebView2 Runtime</b>: a Microsoft system component used for rendering.</li>
+  <li><b>Microsoft Edge WebView2 Runtime</b>: a Microsoft system component used for rendering; if missing, the app points you to Microsoft's official download page.</li>
   <li><b>Upgrade link</b>: opens the Microsoft Store product page when you tap "Upgrade".</li>
+  <li><b>Plugin market</b>: opening the settings "Plugins" page or installing/updating a plugin downloads the market index and packages from our official index (GitHub and its CDN mirror jsDelivr), and checks the official security blocklist. These are plain HTTPS downloads that <b>carry no personal information, account, or device identifiers</b>; packages are verified by SHA-256 and unpacked safely. When offline, only the market is unavailable.</li>
 </ul>
+<p>Beyond this the app makes no network requests and sends no commercial messages.</p>
 
-<h2>4. Third-party plugins</h2>
-<p>Plugins declare their permissions at install time and are governed by their own privacy policies.</p>
+<h2>5. Third-party plugins</h2>
+<p>Market plugins are human-reviewed before listing and show their author and requested permissions (possibly including network access and clipboard) at install time; plugins found in violation are delisted and blocked, and installed copies are automatically disabled and quarantined (local plugin data is kept, never deleted).</p>
+<p>A plugin's own network access and data handling are governed by <b>the plugin and its author's privacy policy</b>, not this one. Please read the plugin description and its permission requests before installing; declining means not installing.</p>
 
-<h2>5. Deleting your data</h2>
-<p>Uninstalling keeps <code>%LOCALAPPDATA%\InfiniteDesk</code> (so reinstalls restore your canvas). Delete that folder to erase everything.</p>
+<h2>6. Your rights and how to exercise them</h2>
+<p>Your data lives only on your device, so every right below can be exercised <b>directly and immediately, without any request to us</b>:</p>
+<ul>
+  <li><b>Access</b>: storage usage is shown on the settings page; all data is plain local files and a database you can open.</li>
+  <li><b>Copy &amp; portability</b>: just copy the files.</li>
+  <li><b>Deletion</b>: delete <code>%LOCALAPPDATA%\InfiniteDesk</code> to erase everything, completely and irreversibly.</li>
+  <li><b>Withdrawal of consent</b>: turn off OS location to withdraw location consent; disable or uninstall a plugin to withdraw its authorization.</li>
+</ul>
+<p class="law">(Corresponding to PIPL Articles 44–47: right to know and decide, to restrict or refuse processing, and to request deletion.)</p>
 
-<h2>6. Children</h2>
-<p>The app is not directed at children under 13.</p>
+<h2>7. Children</h2>
+<p>The app is not directed at children <b>under 14</b>, and we do not knowingly process a minor's personal information without consent from their parent or guardian. Guardians may have data corrected or deleted at any time — simply delete the local data.</p>
 
-<h2>7. Credits</h2>
+<h2>8. Data security</h2>
+<p>Your data never leaves the device; its safety rests on your device's own security (account, disk encryption). Market packages pass mandatory SHA-256 verification, unpack path checks, and manifest validation before install. Regular backups are your friend.</p>
+
+<h2>9. Credits</h2>
 <p>Star data derived from the HYG Database (David Nash, CC BY-SA 4.0) and the Yale Bright Star Catalogue.</p>
 
-<h2>8. Changes &amp; contact</h2>
+<h2>10. Changes &amp; contact</h2>
 <p>Material changes ship with an in-app notice. Contact: <code>cooingwu@foxmail.com</code>.</p>
 </div>
 
