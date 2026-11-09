@@ -33,7 +33,7 @@
 <p>本政策即《中华人民共和国个人信息保护法》第十七条所称的个人信息处理规则：它公开提供、便于查阅和保存，向真实、准确、完整地告知我们的身份与联系方式、处理目的与方式、信息种类与保存期限，以及你行使权利的方式和程序。</p>
 
 <h2>二、我们处理哪些信息（全部仅在你的设备上）</h2>
-<p>以下数据仅在<b>你的设备本地</b>处理与存储，存储目录为 <code>%LOCALAPPDATA%\InfiniteDesk</code>：</p>
+<p>以下数据仅在<b>你的设备本地</b>处理与存储，存储目录为 <code>%LOCALAPPDATA%\Lodestar</code>：</p>
 <ul>
   <li><b>桌面与文件信息</b>：为在画布上显示图标，读取文件名、类型、缩略图与修改时间；仅在本地渲染与记忆布局。</li>
   <li><b>照片元数据</b>：相册插件展示拍摄参数（EXIF）时在本地读取，不外发。</li>
@@ -51,7 +51,7 @@
 </ul>
 
 <h3>本地诊断日志</h3>
-<p>应用在本地目录 <code>%LOCALAPPDATA%\InfiniteDesk\logs</code> 写入诊断日志（<code>app-*.log</code> 会话日志、<code>perf-*.log</code> 性能采样、<code>input-guard.log</code> 桌面点击守护）。日志可能包含上述本地处理信息的痕迹（例如文件路径、定位成功记录）。这些日志<b>只存在于你的设备上，永不上传</b>；历史日志会在启动时与运行期间自动清理（当前会话文件与守护日志保留）。</p>
+<p>应用在本地目录 <code>%LOCALAPPDATA%\Lodestar\logs</code> 写入诊断日志（<code>app-*.log</code> 会话日志、<code>perf-*.log</code> 性能采样、<code>input-guard.log</code> 桌面点击守护）。日志可能包含上述本地处理信息的痕迹（例如文件路径、定位成功记录）。这些日志<b>只存在于你的设备上，永不上传</b>；历史日志会在启动时与运行期间自动清理（当前会话文件与守护日志保留）。</p>
 
 <h3>系统信息只读访问</h3>
 <p>应用还会以<b>只读</b>方式访问：注册表中的主题设置（跟随系统明暗）、文件关联信息（显示图标）、回收站条目（撤销「删除」时原样恢复文件）。均为本地操作，不修改系统安全设置。</p>
@@ -78,7 +78,7 @@
 <ul>
   <li><b>知情与查阅</b>：设置页可查看存储占用；数据均为本地明文文件与数据库，可直接查看。</li>
   <li><b>复制与转移</b>：直接复制本地目录中的文件即可。</li>
-  <li><b>删除</b>：删除 <code>%LOCALAPPDATA%\InfiniteDesk</code> 即彻底、不可逆地清除本应用的全部数据。</li>
+  <li><b>删除</b>：删除 <code>%LOCALAPPDATA%\Lodestar</code> 即彻底、不可逆地清除本应用的全部数据。</li>
   <li><b>撤回同意</b>：关闭系统定位权限即撤回对位置处理的同意；停用或卸载插件即撤回对其授权。</li>
 </ul>
 <p class="law">（对应《个人信息保护法》第四十四条至第四十七条：知情权、决定权、限制或拒绝处理、请求删除。）</p>
@@ -104,7 +104,7 @@
 <p>We collect, upload, and sell <b>no user data</b>. There is no account system, no advertising, no marketing push, no analytics SDK, and no crash collection. Everything happens on your device; we run no servers. This policy is our personal-information processing rule under Article 17 of the PRC Personal Information Protection Law (PIPL): it is published, easy to consult and keep, and truthfully states who we are, what we process, why, for how long, and how you can exercise your rights.</p>
 
 <h2>2. What we process (on your device only)</h2>
-<p>All of the following is processed and stored <b>locally</b> under <code>%LOCALAPPDATA%\InfiniteDesk</code>:</p>
+<p>All of the following is processed and stored <b>locally</b> under <code>%LOCALAPPDATA%\Lodestar</code>:</p>
 <ul>
   <li><b>Files &amp; desktop</b>: file names, types, thumbnails and timestamps are read locally to render icons and remember layout.</li>
   <li><b>Photo metadata (EXIF)</b>: read locally for the gallery caption; never transmitted.</li>
@@ -122,7 +122,7 @@
 </ul>
 
 <h3>Local diagnostic logs</h3>
-<p>The app writes local logs under <code>%LOCALAPPDATA%\InfiniteDesk\logs</code> (<code>app-*.log</code> session log, <code>perf-*.log</code> performance sampling, <code>input-guard.log</code> desktop-click guard). Logs may contain traces of the locally processed data above (e.g. file paths, a successful location fix). They <b>stay on your device and are never uploaded</b>; historical logs are cleaned automatically at startup and periodically (current-session and guard logs are kept).</p>
+<p>The app writes local logs under <code>%LOCALAPPDATA%\Lodestar\logs</code> (<code>app-*.log</code> session log, <code>perf-*.log</code> performance sampling, <code>input-guard.log</code> desktop-click guard). Logs may contain traces of the locally processed data above (e.g. file paths, a successful location fix). They <b>stay on your device and are never uploaded</b>; historical logs are cleaned automatically at startup and periodically (current-session and guard logs are kept).</p>
 
 <h3>Read-only system access</h3>
 <p>The app also reads, read-only: registry theme settings (follow-system light/dark), file associations (to show icons), and Recycle Bin entries (to restore files on undo). All local.</p>
@@ -148,7 +148,7 @@
 <ul>
   <li><b>Access</b>: storage usage is shown on the settings page; all data is plain local files and a database you can open.</li>
   <li><b>Copy &amp; portability</b>: just copy the files.</li>
-  <li><b>Deletion</b>: delete <code>%LOCALAPPDATA%\InfiniteDesk</code> to erase everything, completely and irreversibly.</li>
+  <li><b>Deletion</b>: delete <code>%LOCALAPPDATA%\Lodestar</code> to erase everything, completely and irreversibly.</li>
   <li><b>Withdrawal of consent</b>: turn off OS location to withdraw location consent; disable or uninstall a plugin to withdraw its authorization.</li>
 </ul>
 <p class="law">(Corresponding to PIPL Articles 44–47: right to know and decide, to restrict or refuse processing, and to request deletion.)</p>
